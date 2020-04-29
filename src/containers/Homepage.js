@@ -1,12 +1,12 @@
 import React from 'react';
 import dogs from "../dogsdata";
-import {Button} from "reactstrap";
+import {Button, NavItem,NavLink} from "reactstrap";
 import FavoriteActions from "../components/FavoriteActions";
 import Dog from "../components/Dog";
 import axios from "axios";
 
 
-const apiHost = "MOCK API URL";
+const apiHost = "https://5ea568902d86f00016b45bd6.mockapi.io/:endpoint";
 
 class Homepage extends React.Component {
     constructor(props){
@@ -81,7 +81,12 @@ class Homepage extends React.Component {
                 <ul>
                     {
                         dogs.map((dog) => {
-                            return <Dog toggle={this.toggle} id={dog.id} getStatus={this.getStatus} {...dog}/>
+                            return<NavItem>
+                            <NavLink href = {dog.id} > 
+                           
+                            <Dog   toggle={this.toggle} id={dog.id} getStatus={this.getStatus} {...dog}/>
+                            </NavLink>
+                            </NavItem>
                         })
                     }
                 </ul>
