@@ -4,6 +4,7 @@ import Goldens from "./containers/Goldens";
 import Cavaliers from "./containers/Cavaliers";
 import FilteredDogs from "./containers/FilteredDogs";
 import DetailDog from "./containers/DetailDog";
+import FormPage from "./containers/FormPage"
 
 const routes = [
     {
@@ -29,6 +30,14 @@ const routes = [
         exact: false,
         component: DetailDog,
         title: "Details"
+    },   
+
+    {
+        path: "/formik/form",
+        exact: false,
+        component: FormPage,
+        title: "Form"
+
     }
 ];
 
