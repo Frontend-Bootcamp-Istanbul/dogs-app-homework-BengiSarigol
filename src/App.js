@@ -6,6 +6,7 @@ import routes from "./routes";
 import Homepage from "./containers/Homepage";
 import FilteredDogs from "./containers/FilteredDogs";
 import DetailDog from "./containers/DetailDog";
+import FormPage from "./containers/FormPage"
 
 
 class App extends React.Component{
@@ -18,6 +19,7 @@ class App extends React.Component{
                     <Route path='/hakkinda' exact component={() => <div>Hakkimizda Componenti</div>} />
                     <Route path="/tur/:yazilanTur" exact component={FilteredDogs} />
                     <Route path="/:dogid"  exact component={DetailDog} />
+                    <Route path="/formik/form"  exact component={FormPage} />
                     <Route component={() => <div><h1>404 sayfa bulununamadi</h1></div>} />
                     {/*{*/}
                     {/*    routes.map((route) => {*/}
